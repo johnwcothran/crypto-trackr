@@ -5,8 +5,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci",
-    "cypress": "cypress open"
+    "test:ci": "jest --ci"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.23.0",

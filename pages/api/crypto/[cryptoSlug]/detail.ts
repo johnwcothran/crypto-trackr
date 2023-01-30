@@ -9,7 +9,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { cryptoSlug } = req.query;
     const cryptoDetail = await fetch(`https://api.coincap.io/v2/assets`).then(r => r.json()).then(r => CryptoDetailSchema.parse(r));
     const asset = cryptoDetail.data.find(crypto => crypto.id === cryptoSlug)
-    console.log(cryptoSlug, cryptoDetail)
     if (!asset) throw new Error('Cannot find asset');
     const rankInt = parseInt(asset.rank);
     const rankWindow = rankInt < 6 ? [1, 10] : [rankInt - 5, rankInt + 4];

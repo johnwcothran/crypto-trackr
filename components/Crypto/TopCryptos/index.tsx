@@ -6,7 +6,6 @@ export const TopCrypto = () => {
     const { data } = useQuery(['topCrypto'], {
         queryFn: () => fetch('/api/crypto').then(r => r.json()).then(r => LatestSchema.parse(r))
     });
-    console.log( data );
     return (
 
         <div className="p-4 w-full">

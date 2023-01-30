@@ -6,11 +6,11 @@ import {
 } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 
-if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
-  import('../mocks').then(({ setupMocks }) => {
-    setupMocks()
-  })
-}
+// if (process.env.NEXT_PUBLIC_API_MOCKING === 'true') {
+//   import('../mocks').then(({ setupMocks }) => {
+//     setupMocks()
+//   })
+// }
 
 const queryClient = new QueryClient();
 
